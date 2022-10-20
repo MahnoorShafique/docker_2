@@ -6,5 +6,5 @@ class HomeView(View):
 
    def get(self, request):
       return JsonResponse({"message":
-                           'what is this behaviourc efefewqf',
+                           'what is this dff rgergwrbehaviourc efefewqf',
                            "status": "true"})

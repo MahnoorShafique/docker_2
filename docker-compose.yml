@@ -16,4 +16,4 @@ services:
 
 
 # just run command 
-1/ docker-compose up
+# 1/ docker-compose up
