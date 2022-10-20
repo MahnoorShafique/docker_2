@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+#name of application is app
+  app:
+    build: . # dot specifies same directory has Dockerfile
+    # voume here describes the folder that resides on os within the container
+    volumes: 
+      - .:/django  # /django is the working directory in container as described in Dockerfile
+# .:/django represents copy/mirror whatever is in local computer file into /django directory in container
+    ports:
+      - 8000:8000 # first 8000 is on our computer and secong 8000 is in container
+  # our image is named app as seen on line 4 we will give it a tag of django
+    image: app:django 
+    container_name: django_container
+    command: python manage.py runserver 0.0.0.0:8000
+
+
+# just run command 
+1/ docker-compose up
